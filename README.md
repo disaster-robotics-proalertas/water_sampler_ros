@@ -3,7 +3,7 @@ ROS driver for the Atlas Scientific water sampler
 
 ## Description
 
-This ROS package provides a driver for Atlas Scienfitic's EZO-PMP water dosing pumps (in python), as well as a ROS node for advertising services for operations with the pump, such as check pump state, fill pump, etc.
+This ROS package provides a driver for Atlas Scienfitic's [EZO-PMP](https://www.atlas-scientific.com/product_pages/peristaltic/ezo-pmp.html) water dosing pumps (in python), as well as a ROS node for advertising services for operations with the pump, such as check pump state, fill pump, etc.
 Specifically, the [PMP driver](https://github.com/disaster-robotics-proalertas/water-sampler-ros/blob/master/scripts/PumpControl.py) implements functions which issue commands to the pumps via I2C (e.g., report dosing volume, fill doser up to X mL), and the [ROS sampler service node](https://github.com/disaster-robotics-proalertas/water-sampler-ros/blob/master/scripts/sampler_srv_node.py) externalizes these functions as ROS services, so any system in the ROS environment can call them.
 
 This package was primarily designed to be used on a Raspberry Pi Zero, controlling four pumps on a Platypus Lutra Prop autonomous boat, for water quality monitoring applications.
