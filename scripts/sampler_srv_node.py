@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from water-sampler-ros.srv import *
+from water_sampler_ros.srv import *
 import rospy
 from PumpControl import Sampler
 import time
