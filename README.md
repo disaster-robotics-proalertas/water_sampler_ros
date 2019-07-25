@@ -27,10 +27,10 @@ rosrun water_sampler_ros sampler_srv_node.py
 This will advertise the sampler services, which can be seen with the "rosservice list" command.
 The services and their arguments are:
 
-* /sampler/fill_pump ----> Args: <pump_number> <mL>
-* /sampler/check_pump_state ----> Args: <pump_number>
-* /sampler/empty_pump ----> Args: <pump_number>
-* /sampler/stop_pump ----> Args: <pump_number>
+* /sampler/fill_pump ----> Args: pump_number mL
+* /sampler/check_pump_state ----> Args: pump_number
+* /sampler/empty_pump ----> Args: pump_number
+* /sampler/stop_pump ----> Args: pump_number
 
 ## Installation
 
