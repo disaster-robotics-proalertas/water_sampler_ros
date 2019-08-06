@@ -6,7 +6,9 @@ ROS driver for the Atlas Scientific water sampler
 This ROS package provides a driver for Atlas Scienfitic's [EZO-PMP](https://www.atlas-scientific.com/product_pages/peristaltic/ezo-pmp.html) water dosing pumps (in python), as well as a ROS node for advertising services for operations with the pump, such as check pump state, fill pump, etc.
 Specifically, the [PMP driver](https://github.com/disaster-robotics-proalertas/water-sampler-ros/blob/master/scripts/PumpControl.py) implements functions which issue commands to the pumps via I2C (e.g., report dosing volume, fill doser up to X mL), and the [ROS sampler service node](https://github.com/disaster-robotics-proalertas/water-sampler-ros/blob/master/scripts/sampler_srv_node.py) externalizes these functions as ROS services, so any system in the ROS environment can call them.
 
-This package was primarily designed to be used on a Raspberry Pi Zero, controlling four pumps on a Platypus Lutra Prop autonomous boat, for water quality monitoring applications.
+This package was primarily designed to be used on a Raspberry Pi Zero, controlling four pumps on a Platypus Lutra Prop autonomous boat, for water quality monitoring applications. The hardware and electrical connections' schematic required to use it is illustrated below using [Fritzing](http://fritzing.org/home/).
+![Alt text](docs/images/Sampler_fritzing.png?raw=true "Sampler's electric schematic")
+
 We named the four pumps with numbers from 0 to 3, and address them internally in the [PMP driver](https://github.com/disaster-robotics-proalertas/water-sampler-ros/blob/master/scripts/PumpControl.py).
 Some modification may be required to use the package with other platforms and/or pump addresses.
 Our conventions for naming and addressing the pumps are:
@@ -15,6 +17,9 @@ Our conventions for naming and addressing the pumps are:
 * Pump 1 <--> Address 0x02
 * Pump 2 <--> Address 0x03
 * Pump 3 <--> Address 0x04
+
+When fully assembled, the Sampler should look like the figure below. The four pumps are each connected to a container, with a diameter and height of aproximately 82.6 mm and 96 mm, respectively.
+![Alt text](docs/images/Sampler_hardware.jpeg?raw=true "Sampler's hardware")
 
 ## Usage
 
