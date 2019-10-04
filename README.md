@@ -6,7 +6,7 @@ ROS driver for the Atlas Scientific water sampler
 This ROS package provides a driver for Atlas Scienfitic's [EZO-PMP](https://www.atlas-scientific.com/product_pages/peristaltic/ezo-pmp.html) water dosing pumps (in python), as well as a ROS node for advertising services for operations with the pump, such as check pump state, fill pump, etc.
 Specifically, the [PMP driver](https://github.com/disaster-robotics-proalertas/water-sampler-ros/blob/master/scripts/PumpControl.py) implements functions which issue commands to the pumps via I2C (e.g., report dosing volume, fill doser up to X mL), and the [ROS sampler service node](https://github.com/disaster-robotics-proalertas/water-sampler-ros/blob/master/scripts/sampler_srv_node.py) externalizes these functions as ROS services, so any system in the ROS environment can call them.
 
-This package was primarily designed to be used on a Raspberry Pi Zero, controlling four pumps on a Platypus Lutra Prop autonomous boat, for water quality monitoring applications. The hardware and electrical connections' schematic required to use it is illustrated below using [Fritzing](http://fritzing.org/home/).
+This package was primarily designed to be used on a Raspberry Pi Zero, controlling four pumps on a Platypus Lutra Prop autonomous boat, for water quality monitoring applications. Although the water sampler was designed and built by Platypus LLC, the electronics and software were replaced compared to the original. The hardware and electrical connection schematics required to use it are illustrated below in [Fritzing](http://fritzing.org/home/). 
 ![Alt text](docs/images/Sampler_fritzing.png?raw=true "Sampler's electric schematic")
 
 We named the four pumps with numbers from 0 to 3, and address them internally in the [PMP driver](https://github.com/disaster-robotics-proalertas/water-sampler-ros/blob/master/scripts/PumpControl.py).
@@ -64,8 +64,12 @@ source ~/catkin_ws/devel/setup.bash
 
 ## To-Do:
 
-* Test the package on-site (river or basin) in the autonomous boat
+* ~~Test the package on-site (river or basin) in the autonomous boat~~ [DONE]
 * Advertise the PMP driver functions as actions instead of services (can interrupt, halt or abort actions, with appropriate feedback)
+
+## Acknowledgements
+
+* [Platypus LLC](http://senseplatypus.com/): Mechanical design and physical construction of the water sampler
 
 ## Collaborators
 
