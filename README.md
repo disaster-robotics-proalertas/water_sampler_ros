@@ -21,6 +21,9 @@ Our conventions for naming and addressing the pumps are:
 When fully assembled, the Sampler should look like the figure below. The four pumps are each connected to a container, with a diameter and height of aproximately 82.6 mm and 96 mm, respectively.
 ![Alt text](docs/images/Sampler_hardware.jpeg?raw=true "Sampler's hardware")
 
+![Alt text](docs/images/Sampler_boat.png?raw=true "Sampler in the boat")
+
+
 ## Usage
 
 With a roscore running, simply run the sampler_srv_node.py node:
